@@ -8,6 +8,8 @@ PROJECT_PATH = pathlib.Path(__file__).parent
 PROJECT_UI = PROJECT_PATH / "helloworld.ui"
 
 # Kill someone
+# Test
+
 class HelloworldApp:
     def __init__(self, master=None):
         # 1: Create a builder and setup resources path (if you have images)
