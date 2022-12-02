@@ -1,19 +1,16 @@
-#!/usr/bin/python
+import sys
+from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QApplication, QLabel
 
-import sys, random
-from PySide6.QtWidgets import QApplication, QPushButton
-from PySide6.QtCore import Slot
-
-@Slot()
-def say_hello():
-    price = random.randint(0, 10000)
-    print(price)
-
-# Create the Qt Application
-app = QApplication(sys.argv)
-# Create a button, connect it and show it
-button = QPushButton("Price")
-button.clicked.connect(say_hello)
-button.show()
-# Run the main Qt loop
-app.exec()
+if __name__ == "__main__":
+    app = QApplication()
+    w = QLabel("This is a placeholder text")
+    w.setAlignment(Qt.AlignCenter)
+    w.setStyleSheet("""
+        background-color: #262626;
+        color: #FFFFFF;
+        font-family: Titillium;
+        font-size: 18px;
+        """)
+    w.show()
+    sys.exit(app.exec())
